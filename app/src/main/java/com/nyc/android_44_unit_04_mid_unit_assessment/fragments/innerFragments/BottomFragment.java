@@ -116,7 +116,7 @@ public class BottomFragment extends Fragment {
             Log.d(TAG,"Book: " + books.get(i).getAuthor());
             Log.d(TAG,"Book: " + books.get(i).getYear());
         }
-        BooksAdapter booksAdapter = new BooksAdapter(books);
+        BooksAdapter booksAdapter = new BooksAdapter(books,getActivity().getSupportFragmentManager());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext().getApplicationContext(),LinearLayoutManager.VERTICAL,false);
         recyclerView.setAdapter(booksAdapter);
         recyclerView.setLayoutManager(layoutManager);
