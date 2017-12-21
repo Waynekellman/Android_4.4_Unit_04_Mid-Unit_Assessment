@@ -3,11 +3,15 @@ package com.nyc.android_44_unit_04_mid_unit_assessment.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.nyc.android_44_unit_04_mid_unit_assessment.R;
+import com.nyc.android_44_unit_04_mid_unit_assessment.fragments.innerFragments.BottomFragment;
+import com.nyc.android_44_unit_04_mid_unit_assessment.fragments.innerFragments.TopFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,7 +28,20 @@ public class DisplayFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_display, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_display, container, false);
+
+        TopFragment topFragment = new TopFragment();
+        BottomFragment bottomFragment = new BottomFragment();
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.top_container, topFragment);
+        fragmentTransaction.replace(R.id.bottom_container, bottomFragment);
+        fragmentTransaction.commit();
+
+
+
+
+        return rootView;
     }
 
 }
