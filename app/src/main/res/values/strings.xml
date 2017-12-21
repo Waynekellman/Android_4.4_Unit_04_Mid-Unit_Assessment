@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android_4.4_Unit_04_Mid-Unit_Assessment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="press_me">Press Me</string>
 </resources>
