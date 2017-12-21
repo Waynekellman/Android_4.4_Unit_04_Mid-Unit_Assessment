@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +44,8 @@ public class MainFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+
+        Log.d("Fragment","DisplayFragmentRan");
         return rootView;
     }
 
