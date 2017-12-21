@@ -8,6 +8,15 @@ public class Books {
     private String title;
     private String author;
     private int year;
+    private int position;
+
+    public int getPosition() {
+        return position;
+    }
+
+    public void setPosition(int position) {
+        this.position = position;
+    }
 
     public void setTitle(String title) {
         this.title = title;

@@ -30,11 +30,9 @@ public class DisplayFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_display, container, false);
 
-        TopFragment topFragment = new TopFragment();
         BottomFragment bottomFragment = new BottomFragment();
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.top_container, topFragment);
         fragmentTransaction.replace(R.id.bottom_container, bottomFragment);
         fragmentTransaction.commit();
 
